@@ -1,18 +1,19 @@
 module.exports = function() {
 
-var vaultCode = {};
+var vaulted = {};
 
   var setValue = function(key, value) {
-    vaultCode[key] = value;
+    vaulted[key] = value;
   };
 
   var getValue = function(key) {
-    if(vaultCode.key === undefined) {
+    if(vaulted[key] === undefined) {
       return null;
     } else {
-    return vaultCode[key];
+    return vaulted[key];
     }
   };
+
 
 
   return {
@@ -20,5 +21,3 @@ var vaultCode = {};
     getValue: getValue
   };
 };
-
-vault.setValue("mypass", "devleague");
